@@ -1,0 +1,39 @@
+
+
+<div class="pokemon-card-horizontal"> <div class="card-image-container-horizontal">
+    <img [src]="pokemonData.imageUrl" alt="{{ pokemonData.name }}" class="pokemon-image-horizontal">
+  </div>
+
+  <div class="card-content-horizontal"> <h2 class="pokemon-name-horizontal">{{ pokemonData.name }}</h2>
+
+    <div class="card-details-horizontal"> <div class="card-stat-horizontal">
+        <span class="stat-label-horizontal">HP</span>
+        <div class="stat-bar-container-horizontal">
+          <div class="stat-bar-horizontal" [style.width.%]="pokemonData.hp"></div>
+        </div>
+      </div>
+      <div class="card-stat-horizontal">
+        <span class="stat-label-horizontal">STR</span>
+        <div class="stat-bar-container-horizontal">
+          <div class="stat-bar-horizontal" [style.width.%]="pokemonData.str"></div>
+        </div>
+      </div>
+      <div class="card-stat-horizontal">
+        <span class="stat-label-horizontal">WEAK</span>
+        <div class="stat-bar-container-horizontal">
+          <div class="stat-bar-horizontal" [style.width.%]="pokemonData.weaknessPercentage"></div>
+        </div>
+      </div>
+
+      <div class="card-stat-horizontal">
+        <span class="stat-label-horizontal">HAPPY</span>
+        <div class="smiles-container-horizontal">
+          <img src="assets/cute.png" alt="Happy" class="smile-icon-img-horizontal" *ngFor="let i of [].constructor(pokemonData.smiles)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-actions-horizontal"> <button class="remove-button" (click)="removeCard.emit(pokemonData.id)">X</button>
+  </div>
+</div>

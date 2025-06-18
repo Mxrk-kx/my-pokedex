@@ -1,0 +1,20 @@
+export const POKEMON_TYPE_COLORS = [
+  { name: 'normal', color: '#A8A77A', weakness: ['fighting'] },
+  { name: 'fire', color: '#EE8130', weakness: ['water', 'ground', 'rock'] },
+  { name: 'water', color: '#6390F0', weakness: ['electric', 'grass'] },
+  { name: 'electric', color: '#F7D02C', weakness: ['ground'] },
+  { name: 'grass', color: '#7AC74C', weakness: ['fire', 'ice', 'poison', 'flying', 'bug'] },
+  { name: 'ice', color: '#96D9D6', weakness: ['fire', 'fighting', 'rock', 'steel'] },
+  { name: 'fighting', color: '#C22E28', weakness: ['flying', 'psychic', 'fairy'] },
+  { name: 'poison', color: '#A33EA1', weakness: ['ground', 'psychic'] },
+  { name: 'ground', color: '#E2BF65', weakness: ['water', 'grass', 'ice'] },
+  { name: 'flying', color: '#A98FF3', weakness: ['electric', 'ice', 'rock'] },
+  { name: 'psychic', color: '#F95587', weakness: ['bug', 'ghost', 'dark'] },
+  { name: 'bug', color: '#A6B91A', weakness: ['fire', 'flying', 'rock'] },
+  { name: 'rock', color: '#B6A136', weakness: ['water', 'grass', 'fighting', 'ground', 'steel'] },
+  { name: 'ghost', color: '#735797', weakness: ['ghost', 'dark'] },
+  { name: 'dragon', color: '#6F35FC', weakness: ['ice', 'dragon', 'fairy'] },
+  { name: 'steel', color: '#B7B7CE', weakness: ['fire', 'fighting', 'ground'] },
+  { name: 'fairy', color: '#D685AD', weakness: ['poison', 'steel'] },
+  { name: 'dark', color: '#705746', weakness: ['fighting', 'bug', 'fairy'] }
+];

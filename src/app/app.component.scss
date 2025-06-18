@@ -1,0 +1,114 @@
+
+.circular-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #6a0dad;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 10;
+}
+
+.circular-button:hover {
+  background-color: #5a099d;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.circular-button:active {
+  background-color: #4c46cc; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+.plus-icon {
+  color: white; 
+  font-size: 50px; 
+  font-weight: bold; 
+  line-height: 1; 
+  user-select: none; 
+}
+
+.bottom-bar-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; 
+  background-color: #5a099d;
+  z-index: 8; 
+ 
+}
+
+
+.pokedex-title {
+  margin-top: 10px; 
+  margin-bottom: 20px; 
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+  font-weight: bold;
+  z-index: 5;
+  text-align: center;
+}
+
+// .pokedex-cards-container {
+//   position: absolute;
+//   top: 100px; 
+//   left: 10px; 
+//   right: 10px;
+//   bottom: 130px; 
+//   display: grid; 
+//   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+//   gap: 20px; 
+//   padding: 20px;
+//   overflow-y: auto; 
+//   background-color: rgba(255, 255, 255, 0.9); 
+//   border-radius: 20px; 
+//   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+// }
+
+// .pokedex-cards-container {
+//   display: flex; /* ใช้ flexbox */
+//   flex-direction: column; /* จัดเรียงการ์ดเป็นแนวตั้ง */
+//   align-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+//   padding: 20px;
+//   gap: 15px; /* ระยะห่างระหว่างการ์ด */
+//   height: 500px; /* กำหนดความสูงให้ Scroll ได้ */
+//   overflow-y: auto; /* ทำให้เกิด Scroll แนวตั้ง */
+//   box-sizing: border-box;
+//   width: 100%; /* ให้ Container กว้างเต็ม */
+//   max-width: 1023px; /* จำกัดความกว้างสูงสุดของ Container (ถ้าต้องการ) */
+//   margin: 0 auto;
+//   margin-left: 0px;
+//   margin-right: 0px;
+//    /* จัดให้อยู่กึ่งกลางหน้าจอ */
+// }
+
+.pokedex-cards-container {
+  display: grid; /* เปลี่ยนจาก flex เป็น grid */
+  grid-template-columns: 1fr 1fr; /* 2 คอลัมน์เท่ากัน */
+  gap: 20px; /* ระยะห่างระหว่างการ์ด */
+  padding: 20px;
+  height: 500px; /* กำหนดความสูงให้ Scroll ได้ */
+  overflow-y: auto; /* ทำให้เกิด Scroll แนวตั้ง */
+  box-sizing: border-box;
+  width: 100%; /* ให้ Container กว้างเต็ม */
+  max-width: 1023px; /* จำกัดความกว้างสูงสุดของ Container */
+  margin: 0 auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  align-items: start; /* จัดการ์ดให้ชิดด้านบน */
+}
+
+
+
+

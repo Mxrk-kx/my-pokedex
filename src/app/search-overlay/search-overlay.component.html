@@ -1,0 +1,24 @@
+<div class="search-overlay-backdrop">
+  <div class="search-overlay-content">
+    <button class="close-button" (click)="closeOverlay.emit()">X</button>
+    <!-- <h2 class="search-title">Search Pokemon</h2> -->
+
+    <div class="search-input-container">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Enter Pokemon name" (keyup.enter)="searchPokemon()" />
+      <button class="search-button" (click)="searchPokemon()">
+        <img src="assets/search.png" alt="Search" class="search-icon">
+      </button>
+    </div>
+
+    <div class="search-results-container">
+      <div *ngIf="isLoading" class="loading-spinner"></div>
+      <div *ngIf="!isLoading && searchResults.length === 0 && searchTerm !== ''" class="no-results">No Pokemon found.</div>
+      
+        <app-pokemon-search-card
+          *ngFor="let pokemon of searchResults"
+          [pokemonData]="pokemon"
+          (addPokemon)="addPokemonToPokedex.emit($event)" />
+      </div>
+  </div>
+</div>
+

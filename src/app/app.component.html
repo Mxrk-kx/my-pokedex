@@ -1,0 +1,37 @@
+<div id="root">
+    <h1 class="pokedex-title">My Pokedex</h1>
+    <div class="pokedex-cards-container">
+
+
+    <app-pokemon-display-card 
+      *ngFor="let pokemon of myPokedex" 
+      [pokemonData]="pokemon" 
+      (removeCard)="removePokemonFromPokedex($event)">
+    </app-pokemon-display-card>
+    
+  </div>
+  
+  
+    <button class="circular-button" (click)="toggleSearchOverlay()">
+    <span class="plus-icon">+</span>
+    </button>
+
+  <!-- <div class="add-button-container">
+    <button class="circular-button" (click)="toggleSearchOverlay()">+</button>
+  </div> -->
+
+   <div class="bottom-bar-background"></div>
+
+    <app-search-overlay 
+    *ngIf="showSearchOverlay" 
+    [pokedexPokemonIds]="myPokedexIds" 
+    (closeOverlay)="toggleSearchOverlay()" 
+    (addPokemonToPokedex)="addPokemonToPokedex($event)"
+    (pokemonAdded)="onPokemonAddedFromOverlay($event)"
+    >
+  </app-search-overlay>
+ 
+</div>
+
+
+

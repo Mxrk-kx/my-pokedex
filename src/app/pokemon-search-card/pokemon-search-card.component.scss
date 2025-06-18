@@ -1,0 +1,157 @@
+
+
+.pokemon-card-horizontal {
+  display: flex; /* ใช้ flexbox เพื่อจัดเรียงแนวนอน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* ระยะห่างระหว่างการ์ดในแนวตั้ง */
+  padding: 15px;
+  width: 100%;
+  max-width: 800px; /* กว้างเต็ม 1 แถว */
+  box-sizing: border-box; /* ให้ padding ไม่เพิ่มความกว้างเกิน 100% */
+  min-height: 150px; /* กำหนดความสูงขั้นต่ำเพื่อความสม่ำเสมอ */
+
+}
+
+.card-image-container-horizontal {
+  flex-shrink: 0; /* ไม่ให้รูปภาพหดตัว */
+  width: 100px; /* กำหนดความกว้างของส่วนรูปภาพ */
+  height: 100px; /* กำหนดความสูงของส่วนรูปภาพ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; /* ระยะห่างระหว่างรูปภาพกับเนื้อหา */
+}
+
+.pokemon-image-horizontal {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ปรับขนาดรูปภาพให้พอดี */
+}
+
+.card-content-horizontal {
+  flex-grow: 1; /* ให้ส่วนเนื้อหาขยายเต็มพื้นที่ที่เหลือ */
+  display: flex;
+  flex-direction: column; /* จัดเรียงข้อมูลภายในส่วนเนื้อหาเป็นแนวตั้ง */
+  justify-content: center;
+}
+
+.pokemon-name-horizontal {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card-details-horizontal {
+  display: flex;
+  flex-direction: column; /* จัดเรียง stat เป็นแนวตั้ง */
+  gap: 5px; /* ระยะห่างระหว่าง stat */
+}
+
+.card-stat-horizontal {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  
+}
+
+.stat-label-horizontal {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 50px; /* กำหนดความกว้างให้ label เท่ากัน */
+  text-align: right;
+}
+
+.stat-bar-container-horizontal {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.stat-bar-horizontal {
+  height: 100%;
+  background-color: #1a70f3;  /* สีม่วง */
+  border-radius: 5px;
+}
+
+.smiles-container-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 3px; /* ลดระยะห่างระหว่างไอคอนเล็กน้อย */
+  flex-wrap: wrap;
+  justify-content: flex-start; /* จัดเรียงหน้ายิ้มไปทางซ้าย */
+  margin-left: 60px; /* ชดเชย space ของ stat-label */
+}
+
+.smile-icon-img-horizontal {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.card-actions-horizontal {
+  flex-shrink: 0; /* ไม่ให้ส่วนปุ่มหดตัว */
+  margin-left: 20px; /* ระยะห่างจากส่วนเนื้อหา */
+  display: flex;
+  align-self: center; /* จัดปุ่มให้อยู่กึ่งกลางแนวตั้งของการ์ด */
+}
+
+.add-button, .remove-button { /* รวม Style ของปุ่ม Add/Remove */
+  background-color: #4CAF50; /* สีเขียวสำหรับ Add */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.remove-button {
+  background-color: #f44336; /* สีแดงสำหรับ Remove */
+}
+
+.remove-button:hover {
+  background-color: #da190b;
+}
+
+/* Media Queries สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+  .pokemon-card-horizontal {
+    flex-direction: column; /* บนมือถือ อาจจะจัดเรียงเป็นแนวตั้ง */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .card-image-container-horizontal {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-content-horizontal {
+    width: 100%;
+  }
+
+  .card-actions-horizontal {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .smiles-container-horizontal {
+    margin-left: 0;
+  }
+}
